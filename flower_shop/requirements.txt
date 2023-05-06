@@ -1,0 +1,6 @@
+django==4.2.1
+djangorestframework == 3.14.0
+django-phonenumber-field == 7.0.0
+django-rest-swagger == 2.2.0
+pyttsx3 == 2.90
+python-dotenv==1.0.0
