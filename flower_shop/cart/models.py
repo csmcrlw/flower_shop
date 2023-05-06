@@ -27,7 +27,7 @@ class CustomUser(models.Model):
 
 class Cart(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, verbose_name='Пользователь')
-    products = models.ManyToManyField(shop.models.Product, null=True, blank=True, verbose_name='Товары')
+    products = models.ManyToManyField(shop.models.Product, blank=True, verbose_name='Товары')
     quantity = models.IntegerField(null=False, default=0, verbose_name='Количество')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Создано')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлено')

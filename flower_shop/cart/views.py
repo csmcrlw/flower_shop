@@ -40,7 +40,7 @@ class LoginUser(GenericAPIView):
 class CartViewSet(viewsets.ModelViewSet):
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
-    permission_classes = (IsOwnerOrReadOnly, IsAdminUser)
+    permission_classes = (IsAdminUser, IsOwnerOrReadOnly)
 
     def get_queryset(self):
         return Cart.objects.filter(user=self.request.user, is_ordered=True)
